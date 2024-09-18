@@ -45,6 +45,17 @@ make && ./visitTrack config.yaml
 ``` sh
 ./deploy.sh
 ```
+### Docker运行
+
+``` sh
+docker run -d -v ./config.yaml:/config.yaml -p 8080:8080 --name visittrack visittrack
+```
+
+### 添加探针
+
+```sh
+添加`<script type="text/javascript" src="http://localhost:3000/analytics.js"></script>`到要统计的网页中
+```
 
 ### 查看访问量
 打开[http://localhost:3000/manage](http://localhost:3000/manage)(将localhost:3000替换成你部署的服务器地址)
