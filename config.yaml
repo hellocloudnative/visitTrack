@@ -1,0 +1,11 @@
+manage:
+  username: admin
+  password: 123456
+db:
+  username: root
+  password: 960096
+  port: 3306
+  host: 10.44.61.70
+  dbname: visit_analytics
+deploy_host: localhost:3000
+run_at: :3000
