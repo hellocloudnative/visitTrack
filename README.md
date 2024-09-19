@@ -17,7 +17,7 @@ make prepare 		# 下载库文件
 
 ### 创建数据库
 ``` sql
-CREATE DATABASE IF NOT EXISTS `visit_analytics` DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `visit_track` DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 ```
 
 ### 配置文件
@@ -31,7 +31,7 @@ db:
   password: root
   port: 3306
   host: localhost
-  dbname: visit_analytics
+  dbname: visit_track
 deploy_host: localhost:3000
 run_at: :3000
 ```
@@ -48,7 +48,7 @@ make && ./visitTrack config.yaml
 ### Docker运行
 
 ``` sh
-docker run -d -v ./config.yaml:/config.yaml -p 8080:8080 --name visittrack visittrack
+docker run -d -v ./config.yaml:/config.yaml -p 3000:3000 --name visittrack visittrack:1.0 
 ```
 
 ### 添加探针
